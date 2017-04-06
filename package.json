@@ -1,0 +1,25 @@
+{
+  "name": "recall-file-encoding",
+  "main": "./lib/recall-file-encoding",
+  "version": "0.0.1",
+  "description": "Recall last used file encoding",
+  "keywords": [
+    "racall",
+    "file",
+    "encoding",
+    "restore",
+    "save",
+    "codepage",
+    "character"
+  ],
+  "repository": "https://github.com/neu-rah/recall-file-encoding",
+  "author": "Rui Azevedo <ruihfazevedo@gmail.com>",
+  "contributors": [],
+  "homepage": "http://r-site.net",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}
