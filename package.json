@@ -1,7 +1,7 @@
 {
   "name": "recall-file-encoding",
   "main": "./lib/recall-file-encoding",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Recall last used file encoding",
   "keywords": [
     "racall",
@@ -20,6 +20,5 @@
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
