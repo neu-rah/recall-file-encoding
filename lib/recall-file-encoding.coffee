@@ -1,24 +1,25 @@
 {CompositeDisposable} = require 'atom'
 
-module.exports = OrbitalConf =
+module.exports = recallFileEncConf =
   subscriptions: null
-  orbitalConf: {}
+  recallFileEncConf: {}
 
   handleEncRestore: () ->
     editor = atom.workspace.getActiveTextEditor()
     if editor
       uri = editor.getURI()
-      if @orbitalConf[uri]?
-        editor.setEncoding(@orbitalConf[uri])
+      if @recallFileEncConf[uri]?
+        editor.setEncoding(@recallFileEncConf[uri])
 
   handleEncSave: () ->
     editor = atom.workspace.getActiveTextEditor()
-    uri = editor.getURI()
-    @orbitalConf[uri]=editor.getEncoding()
+    if editor
+      uri = editor.getURI()
+      @recallFileEncConf[uri]=editor.getEncoding()
 
   activate: (state) ->
     @subscriptions = new CompositeDisposable
-    @orbitalConf = state.orbitalConfState ? {}
+    @recallFileEncConf = state.recallFileEncConfState ? {}
 
     @subscriptions.add atom.workspace.observeTextEditors (editor) =>
       @subscriptions.add editor.onDidSave () =>
@@ -32,4 +33,4 @@ module.exports = OrbitalConf =
     @subscriptions.dispose()
 
   serialize: ->
-    {orbitalConfState: @orbitalConf}
+    {recallFileEncConfState: @recallFileEncConf}
