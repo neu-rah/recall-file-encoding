@@ -1,7 +1,7 @@
 {
   "name": "recall-file-encoding",
   "main": "./lib/recall-file-encoding",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Recall last used file encoding",
   "keywords": [
     "recall",
